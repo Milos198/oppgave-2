@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #151515;
+  font-family: "Inter", sans-serif;
+  color: #333;
+
+  display: flex;
+  
+  justify-content: center;
+  padding-top: 40px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: transparent;
+  border-radius: 12px;
+}
+
+
+
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+
+}
+
+.card-cookie {
+  background: transparent;
+  padding: 25px;
+  border-radius: 12px;
+  border: whitesmoke solid 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 0;
+  font-weight: 900;
+  color: rgb(23, 80, 26);
+}
+
+.catfacts-card {
+  background-image: url("/catfacts-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+
+}
+
+.catfacts-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+
+.catfacts-card>* {
+  position: relative;
+  z-index: 1;
+}
+
+.users-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px;
+  align-items: start;
+}
+
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.user-form button {
+  padding: 10px 16px;
+  border: none;
+  background: #4f8254;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-form button:hover {
+  background: #3a6340;
+}
+
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+@media (max-width: 700px) {
+  .users-layout {
+    grid-template-columns: 1fr; 
+  }
+
+  .user-list {
+    margin-top: 20px;
+  }
+}
